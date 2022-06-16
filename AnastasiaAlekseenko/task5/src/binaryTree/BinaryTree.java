@@ -4,22 +4,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Stack;
 
-/**
- * Класс, реализующий структуру "бинарное дерево поиска". Бинарное дерево поиска — это бинарное дерево, обладающее
- * дополнительными свойствами: значение левого потомка меньше значения родителя, а значение правого потомка больше
- * значения родителя для каждого узла дерева. То есть, данные в бинарном дереве поиска хранятся в отсортированном виде.
- * При каждой операции вставки нового или удаления существующего узла отсортированный порядок дерева сохраняется. При
- * поиске элемента сравнивается искомое значение с корнем. Если искомое больше корня, то поиск продолжается в правом
- * потомке корня, если меньше, то в левом, если равно, то значение найдено и поиск прекращается.
- */
 public class BinaryTree<V extends Comparable<V>> {
 
     Node<V> root;
 
     /**
      * Добавляет новый элемент в дерево.
-     *
-     * @param value Добавляемый элемент.
      */
     public void put(V value) {
 
@@ -51,8 +41,6 @@ public class BinaryTree<V extends Comparable<V>> {
 
     /**
      * Удаляет указанный элемент из дерева.
-     *
-     * @param value удаляемый элемент.
      */
     public void remove(V value) {
 
@@ -158,9 +146,6 @@ public class BinaryTree<V extends Comparable<V>> {
 
     /**
      * Осуществляет бинарный поиск по дереву.
-     *
-     * @param value Искомый в дереве элемент.
-     * @return {@code true}, если элемент в параметре присутствует в дереве, иначе {@code false}.
      */
     public boolean contains(V value) {
 
@@ -188,8 +173,6 @@ public class BinaryTree<V extends Comparable<V>> {
 
     /**
      * Преобразует дерево в {@link ArrayList}.
-     *
-     * @return {@link ArrayList} со всеми элементами дерева.
      */
     public ArrayList<V> toArray() {
 
@@ -215,8 +198,6 @@ public class BinaryTree<V extends Comparable<V>> {
 
     /**
      * Осуществляет обход всего дерева, вычисляет длины ветвей, затем находит наибольшую из них.
-     *
-     * @return Количество узлов в самой длинной ветке.
      */
     public int treeHeight() {
 
@@ -256,10 +237,6 @@ public class BinaryTree<V extends Comparable<V>> {
         root = null;
     }
 
-    /**
-     * Класс, представляющий составляющую дерева {@link BinaryTree} - узел, содержащий ключ {@link #value}, ссылку на
-     * родителя {@link #parent} и ссылки на левого {@link #left} и правого {@link #right} потомков.
-     */
     private static class Node<V extends Comparable<V>> {
 
         V value;

@@ -14,6 +14,3 @@ public class Main {
 		taskList.clear();
 	}
 }
-© 2022 GitHub, Inc.
-Terms
-P
